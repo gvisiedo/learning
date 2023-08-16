@@ -72,7 +72,30 @@ function ataqueAleatorioEnemigo(){
     }else {
         ataqueEnemigo = 'Tierra'
     }
+    combate()
 
+}
+
+function combate(){
+    if(ataqueEnemigo==ataqueJugador){
+        crearMensaje('Empate')
+
+    }else if(ataqueJugador== 'FUEGO' && ataqueEnemigo== 'TIERRA'){
+        crearMensaje('Ganaste')
+    }else if(ataqueJugador== 'AGUA' && ataqueEnemigo== 'FUEGO'){
+        crearMensaje('Ganaste')
+    }else if(ataqueJugador== 'TIERRA' && ataqueEnemigo== 'AGUA'){
+        crearMensaje('Ganaste')
+    }else{
+        crearMensaje('Perdiste')
+    }
+}
+
+function crearMensaje(resultado){
+    let sectionMensajes = document.getElementById('mensajes');
+    let parrafo = document.createElement('p')
+    parrafo.innerHTML = 'Tu mascota atacó con ' + ataqueJugador +', las mascotas del enemigo atacó con ' + ataqueEnemigo +'- '+ resultado;
+    sectionMensajes.appendChild(parrafo);
 }
 
 function aleatorio(min,max){
