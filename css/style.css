@@ -3,11 +3,12 @@
   @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 
   body{
-    font-family: 'Fredoka', sans-serif;
+    font-family: 'Poppins', sans-serif;
     background-color: #041562;
   }
 
 .titulo{
+    font-family: 'Fredoka', sans-serif;
     color: white;
     font-size: 32px;
 }
@@ -57,4 +58,21 @@ input{
     background: transparent;
     border: 2px solid white;
     color: white;
+    font-family:'Poppins', sans-serif ;
+    margin-top: 30px;
+}
+#seleccionar-ataque{
+    
+    flex-direction: column;
+    align-items: center;
+}
+.boton-de-ataque{
+    background-color: #11468F;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    border-color: transparent;
+    width: 100px;
+    color: white;
+    font-family:'Poppins', sans-serif ;
 }
