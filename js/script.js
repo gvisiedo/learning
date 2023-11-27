@@ -17,11 +17,28 @@ const sectionMensajes = document.getElementById('resultado');
 const ataqueDelJugador = document.getElementById('ataqueDelJugador');
 const ataqueDelEnemigo = document.getElementById('ataqueDelEnemigo');
 
-
+let mokepones = []
 let ataqueJugador 
 let ataqueEnemigo
 let vidasJugador = 3
 let vidasEnemigo = 3
+
+class Mokepon{
+    constructor(nombre, foto, vida){
+        this.nombre = nombre
+        this.foto = foto
+        this.vida = vida
+        this.ataques = []
+    }
+};
+
+let hipodoge = new Mokepon('Hipodoge', './assets/mokepons_mokepon_hipodoge_attack.png', 3);
+let capipepo = new Mokepon('Capipepo', './assets/mokepons_mokepon_capipepo_attack.png', 3);
+let ratigueya = new Mokepon('Ratigueya', './assets/mokepons_mokepon_ratigueya_attack.png', 3);
+
+hipodoge.ataques.push()
+
+/*mokepones.push(hipodoge,capipepo,ratigueya)*/
 
 function iniciarJuego(){
     
@@ -41,8 +58,6 @@ function seleccionarMascotaJugador(){
     
     sectionSeleccionarMascota.style.display= 'none'
     
-
-
 
    if(inputHipodoge.checked){
     spanMascotaJugador.innerHTML ='Hipodoge';
