@@ -159,7 +159,7 @@ function seleccionarMascotaJugador(){
     
     //sectionSeleccionarAtaque.style.display = 'flex'
     
-    sectionSeleccionarMascota.style.display= 'none'
+    
   
    
     
@@ -175,7 +175,9 @@ function seleccionarMascotaJugador(){
         mascotaJugador=inputRatigueya.id;
     }else {
         alert('Selecciona una mascota');
+        return
     }
+    sectionSeleccionarMascota.style.display= 'none'
     seleccionarMokepon(mascotaJugador)
 
     extraerAtaques(mascotaJugador)
